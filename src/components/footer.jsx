@@ -17,7 +17,7 @@ const Footer = () => {
             </div>
             <section className="about">
                 <h2>Hannah Hartley</h2>
-                <h3>Full Stack Web Dev</h3>
+                <p>Full Stack Web Dev</p>
             </section>
         </footer>
     );

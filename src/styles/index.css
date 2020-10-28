@@ -161,11 +161,15 @@ footer {
   transition: 0.3s ease;
 }
 
-.about h2, .about h3{
+.about h2, .about p{
   color: white;
   font-weight: bold;
   font-size: 2rem;
   margin: 0 20px 0 10px;
+}
+
+.about h2 {
+  letter-spacing: 1px;
 }
 
 .about{ 
@@ -174,4 +178,53 @@ footer {
   flex-direction: column;
   align-items: flex-end;
   justify-content:center;
+}
+
+.modal-success {
+  font-family: var(--header-font);
+}
+
+.link-select {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.link-select .ant-btn-primary {
+  background-color: var(--primary);
+  outline: none;
+  border: none;
+  font-family: var(--header-font);
+  margin-left: 10px;
+}
+
+.link-select .ant-btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.link-select .ant-btn-primary:focus {
+  background-color: var(--primary-dark);
+}
+
+.ant-modal-content {
+  font-family: var(--header-font);
+}
+
+.ant-modal-content a {
+  font-family: sans-serif;
+}
+
+.ant-modal-footer .ant-btn-primary {
+  background-color: var(--primary);
+  outline: none;
+  border: none;
+  margin-left: 10px;
+}
+
+.ant-modal-footer .ant-btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.ant-modal-footer .ant-btn-primary:focus {
+  background-color: var(--primary-dark);
 }
