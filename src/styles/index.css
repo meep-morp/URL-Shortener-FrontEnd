@@ -93,7 +93,7 @@ form h2 {
   font-size: 2rem;
 }
 
-header h1 {
+form h1 {
   color: var(--primary);
   font-size: 4rem;
 }
@@ -214,17 +214,78 @@ footer {
   font-family: sans-serif;
 }
 
-.ant-modal-footer .ant-btn-primary {
+.ant-modal-footer .btn {
   background-color: var(--primary);
   outline: none;
   border: none;
   margin-left: 10px;
+  padding: 8px;
+  color: white;
+  font-family: var(--header-font);
 }
 
-.ant-modal-footer .ant-btn-primary:hover {
+.ant-modal-footer .btn:hover {
+  background-color: var(--primary-dark);
+  transition: 0.5s ease;
+}
+
+.ant-modal-footer .btn:focus {
   background-color: var(--primary-dark);
 }
 
-.ant-modal-footer .ant-btn-primary:focus {
-  background-color: var(--primary-dark);
+.ant-modal-content .ant-modal-header {
+  background: var(--primary);
+}
+
+.ant-modal-content .ant-modal-header .ant-modal-title{
+  color: white;
+}
+
+.spin {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+}
+
+.stats h2, .cards h3 {
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+
+.stats p {
+  font-size: 1.5rem;
+}
+
+.stats h2 {
+  font-size: 2.5rem;
+}
+
+.stats {
+  height: 85vh;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards {
+  margin-top: 20px;
+  width: 80%;
+  box-shadow: 3px 9px 6px -2px rgba(111, 102, 102, 0.15);
+  display: flex;
+  justify-content:space-evenly;
+  border-radius: 10px;
+  text-align: center;
+  background-color: white;
+}
+
+.graph {
+    margin-top: 20px;
+  width: 80%;
+  height: 45%;
+  box-shadow: 5px 5px 8px 5px rgba(111, 102, 102, 0.15);
+  background-color: white;
+  border-radius: 10px;
 }

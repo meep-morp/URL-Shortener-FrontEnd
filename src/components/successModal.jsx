@@ -2,8 +2,9 @@ import { Button } from 'antd';
 import Modal from 'antd/lib/modal/Modal';
 import React, { useState } from 'react';
 import { PaperClipOutlined } from "@ant-design/icons";
+import { Link } from 'react-router-dom';
 
-const SuccessModal = ({ modal, setModal, link }) => {
+const SuccessModal = ({ modal, setModal, link, alias }) => {
     const handleCancel = e => {
         setModal(false);
     }
@@ -20,9 +21,9 @@ const SuccessModal = ({ modal, setModal, link }) => {
                     <Button key="back" onClick={handleCancel}>
                         Return
             </Button>,
-                    <Button key="submit" type="primary">
+                    <Link className="btn" key="submit" to={`/${alias}`} >
                         Link Stats
-            </Button>,
+            </Link>,
                 ]}
             >
                 <div className="link-select">

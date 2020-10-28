@@ -11,6 +11,7 @@
     "axios": "^0.21.0",
     "babel-plugin-import": "^1.13.1",
     "less-loader": "^7.0.2",
+    "plotly": "^1.0.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",

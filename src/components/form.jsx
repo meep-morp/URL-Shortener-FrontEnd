@@ -46,8 +46,12 @@ const Form = props => {
 
     return (
         <form onSubmit={onSubmitHandler}>
-            <SuccessModal link={information && `https://url-shortt.herokuapp.com/${information.alias}`} modal={modal} setModal={setModal} />
-            <Header />
+            <SuccessModal
+                link={information && `https://url-shortt.herokuapp.com/${information.alias}`} modal={modal}
+                setModal={setModal}
+                alias={information && information.alias}
+            />
+            <h1>url shortt</h1>
             <div className="form-container">
                 <h2>Enter Link and Alias</h2>
                 <Input
