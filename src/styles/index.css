@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+:root {
+  --primary: #fe3e4b;
+  --primary-dark: #b6111c;
+  --header-font: 'Black Han Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--header-font);
+}
+
+.home-container section{
+  width: 40%;
+  display: flex;
+  /* align-items: top; */
+}
+
+.ant-input-affix-wrapper {
+  margin-bottom: 10px;
+}
+
+form .ant-btn-primary {
+  background-color: var(--primary);
+  outline: none;
+  border: none;
+  width: 60%;
+  font-family: var(--header-font)
+}
+
+form .ant-btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+form .ant-btn-primary:focus {
+  background-color: var(--primary-dark);
+}
+
+.home-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner{
+  width: 55%;
+  height: 100vh;
+  background-image: url(../assets/background-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.banner h2 {
+  color: white;
+  font-size: 3rem;
+  margin-left: 50px;
+  margin-top: 10%;
+}
+
+.banner strong {
+  color: var(--primary);
+}
+
+form {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: top; */
+}
+
+.form-container {
+  flex-direction: column;
+}
+
+form h2 {
+  color: black;
+  font-size: 2rem;
+}
+
+header h1 {
+  color: var(--primary);
+  font-size: 4rem;
+}
+
+form header {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.alert {
+  width: 100%;
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  margin-right: 10px;
+}
+
+a .icon {
+  color: black;
+}
+
+a .icon:hover {
+  color: var(--primary);
+  transition: 0.3s ease;
+}
+
+.input {
+  margin: 10px;
+}
+
+footer {
+  display: flex;
+  bottom:0;
+  background: var(--primary);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+  font-size: 3rem;
+}
+
+.links a {
+  color: rgb(255, 128, 128);
+}
+
+.link{
+  cursor: pointer;
+}
+
+.link:hover{ 
+  color: white;
+  transition: 0.3s ease;
+}
+
+.about h2, .about h3{
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0 20px 0 10px;
+}
+
+.about{ 
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content:center;
+}
