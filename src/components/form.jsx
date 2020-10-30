@@ -88,7 +88,13 @@ const Form = props => {
                     : <Button onClick={onSubmitHandler} className="btn" type="primary">Go</Button>
                 }
                 <h3 style={{ marginTop: 40 }}>View Link Information</h3>
-                <Search onChange={onSearchChangeHandler} onSearch={onSearchHandler} enterbutton="Go" placeholder="Enter Alias..." prefix={<InfoCircleOutlined />} />
+                <Search
+                    onChange={onSearchChangeHandler}
+                    onSearch={onSearchHandler}
+                    enterbutton="Go"
+                    placeholder="Enter Alias..."
+                    prefix={<InfoCircleOutlined />}
+                />
                 {error
                     ? <Alert
                         message="Something went wrong..."
