@@ -76,7 +76,7 @@ const Stats = props => {
                         width: window.innerWidth < 450 ? '80%' : '100%',
                     }}
                     layout={{
-                        xaxis: { title: { text: 'City' } },
+                        xaxis: { title: { text: 'Date' } },
                         yaxis: { tite: { text: 'Population' } },
                         title: 'Visits Over Time',
                         showlegend: false,
