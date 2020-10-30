@@ -13,7 +13,7 @@ function App() {
 				<Route path="/" exact>
 					<div className="home-container">
 						<Banner />
-						<section>
+						<section className="form">
 							<Form />
 						</section>
 					</div>
