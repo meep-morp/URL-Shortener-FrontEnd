@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import axios from "axios";
-import { Spin } from 'antd';
+import { Button, Spin } from 'antd';
+import Plot from 'react-plotly.js';
+import { RollbackOutlined } from '@ant-design/icons';
 
 const Stats = props => {
     const [link, setLink] = useState(null);
@@ -29,6 +31,7 @@ const Stats = props => {
 
     return (
         <div className="stats">
+            <Link to="/" className="btnBack"><RollbackOutlined /></Link >
             <h2>Stats for
                 <a href={`https://url-shortt.herokuapp.com/${link.alias}`}
                     rel="noreferrer"
@@ -43,20 +46,43 @@ const Stats = props => {
                     <p>{link.clicks}</p>
                 </div>
                 <div className="clicks">
-                    <h3>Clicks</h3>
-                    <p>{link.clicks}</p>
+                    <h3>Latest Visitor</h3>
+                    <p>{link.ipaddresses.length !== 0 ? link.ipaddresses[link.ipaddresses.length - 1] : "No one has visited yet"}</p>
                 </div>
                 <div className="clicks">
-                    <h3>Clicks</h3>
-                    <p>{link.clicks}</p>
-                </div>
-                <div className="clicks">
-                    <h3>Clicks</h3>
-                    <p>{link.clicks}</p>
+                    <h3>Last Used</h3>
+                    <p>{link.dates !== 0 ? link.dates[link.dates.length - 1] : "No one has visited yet"}</p>
                 </div>
             </div>
             <div className="graph">
+                <Plot
+                    data={[
+                        {
+                            y: link.clicks,
+                            x: link.dates,
+                            type: 'line',
+                            mode: 'lines+markers',
+                            marker: { color: '#fe3e4b' },
+                            name: link.ipaddresses[0],
+                            automargin: true,
+                            orientation: 'v',
+                        },
+                        {
 
+                        }
+                    ]}
+                    style={{
+                        height: 'auto',
+                        width: window.innerWidth < 450 ? '80%' : '100%',
+                    }}
+                    layout={{
+                        xaxis: { title: { text: 'City' } },
+                        yaxis: { tite: { text: 'Population' } },
+                        title: 'Visits Over Time',
+                        showlegend: false,
+                        autosize: true,
+                    }}
+                />
             </div>
         </div>
     )

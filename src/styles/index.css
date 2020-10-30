@@ -290,6 +290,24 @@ footer {
   border-radius: 10px;
 }
 
+.btnBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  font-size: 2rem;
+  color: var(--primary);
+  padding: 10px;
+}
+
+.info {
+  margin-top: 30px;
+}
+
+.ant-input-affix-wrapper {
+  padding: 0;
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 768px) {

@@ -1,13 +1,16 @@
 import { Alert, Button, Input, Spin } from 'antd';
 import React, { useState } from 'react';
-import { LinkOutlined, SendOutlined } from '@ant-design/icons';
+import { InfoCircleOutlined, LinkOutlined, SendOutlined } from '@ant-design/icons';
 import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
 import Header from './header';
 import SuccessModal from './successModal';
+import Search from 'antd/lib/input/Search';
+import { useHistory } from 'react-router-dom';
 
 const Form = props => {
     const [url, setUrl] = useState({});
+    const [search, setSearch] = useState("")
     const [information, setInformation] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
@@ -44,6 +47,16 @@ const Form = props => {
             });
     }
 
+    const history = useHistory();
+
+    const onSearchHandler = (e) => {
+        history.push(`/${search}`);
+    }
+
+    const onSearchChangeHandler = (e) => {
+        setSearch(e.target.value);
+    }
+
     return (
         <form onSubmit={onSubmitHandler}>
             <SuccessModal
@@ -74,6 +87,8 @@ const Form = props => {
                     ? <Button type="primary" className="btn" loading>Loading</Button>
                     : <Button onClick={onSubmitHandler} className="btn" type="primary">Go</Button>
                 }
+                <h3 style={{ marginTop: 40 }}>View Link Information</h3>
+                <Search onChange={onSearchChangeHandler} onSearch={onSearchHandler} enterbutton="Go" placeholder="Enter Alias..." prefix={<InfoCircleOutlined />} />
                 {error
                     ? <Alert
                         message="Something went wrong..."
